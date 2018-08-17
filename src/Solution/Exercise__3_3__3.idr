@@ -1,5 +1,7 @@
 import Data.Vect
 
+-- TODO: Refactor this.
+
 total multMatrix : Num numType => Vect n (Vect m numType) -> Vect m (Vect p numType) -> Vect n (Vect p numType)
 multMatrix [] ys = []
 multMatrix (x :: xs) ys = multLeftRow x ys :: multMatrix xs ys where

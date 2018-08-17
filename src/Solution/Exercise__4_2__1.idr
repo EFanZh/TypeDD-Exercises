@@ -10,7 +10,7 @@ data Vehicle : PowerSource -> Type where
 total wheels : Vehicle power -> Nat
 wheels Unicycle = 1
 wheels Bicycle = 2
-wheels Motorcycle = 2
+wheels (Motorcycle fuel) = 2
 wheels (Car fuel) = 4
 wheels (Bus fuel) = 4
 
