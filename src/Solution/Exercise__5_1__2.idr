@@ -1,4 +1,4 @@
-printLonger : IO ()
+total printLonger : IO ()
 printLonger = do putStr "First string: " >>=
                   \_ => getLine >>=
                   \str1 => putStr "Second string: " >>=

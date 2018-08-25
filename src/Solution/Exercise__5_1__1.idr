@@ -1,4 +1,4 @@
-printLonger : IO ()
+total printLonger : IO ()
 printLonger = do putStr "First string: "
                  str1 <- getLine
                  putStr "Second string: "
