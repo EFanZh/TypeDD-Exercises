@@ -13,8 +13,7 @@ run (More fuel) (Do c f) = do res <- c
                               run fuel (f res)
 run Dry p = putStrLn "Out of fuel"
 
-partial
-forever : Fuel
+partial forever : Fuel
 forever = More forever
 
 totalREPL : (prompt : String) -> (action : String -> String) -> InfIO

@@ -5,8 +5,7 @@ import System
 
 data Fuel = Dry | More (Lazy Fuel)
 
-partial
-forever : Fuel
+partial forever : Fuel
 forever = More forever
 
 data Command : Type -> Type where
@@ -78,8 +77,7 @@ arithInputs seed = map bound (randoms seed) where
     bound num with (divides num 12)
         bound ((12 * div) + rem) | (DivBy prf) = rem + 1
 
-partial
-main : IO ()
+partial main : IO ()
 main = do seed <- time
           Just score <- run forever (quiz (arithInputs (fromInteger seed)) 0 0) | Nothing => putStrLn "Ran out of fuel"
           putStrLn ("Final score: " ++ show score)

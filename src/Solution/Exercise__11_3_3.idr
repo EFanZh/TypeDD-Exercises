@@ -2,8 +2,7 @@
 
 data Fuel = Dry | More (Lazy Fuel)
 
-partial
-forever : Fuel
+partial forever : Fuel
 forever = More forever
 
 data Command : Type -> Type where
